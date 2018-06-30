@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700');
+
+header{
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+.hidden,
+.hidden_alert{
+  opacity: 0;
+}
+
+.show,
+.show_alert{
+  opacity: 1;
+}
+
+.not_done input{
+  border: none;
+  background-color: transparent;
+  font-family: arial;
+}
+/*font*/
+input,
+button{
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/*-----------FORM------------*/
+.wrapper-input form{
+  display: flex;
+  justify-content: center;
+  margin: 0 2% 1.5em 2%;
+}
+
+.wrapper-input input{
+  border-radius: 2px;
+  border: 1px solid #dedede;
+  padding: 3px 0px 3px 15px;
+  width: 40%;
+  height: 2rem;
+  font-size: 1.5em;
+}
+
+.wrapper-input input:nth-child(2){
+  margin: 0 0.5em;
+  width: 30%;
+}
+
+/*--------WRAPPER_TAREFAS------*/
+.wrapper_tarefas_done li,
+.wrapper_tarefas li{
+  list-style: none;
+  padding: 5px;
+  border-radius: 2px;
+  margin: 2px 0;
+  display: flex;
+  align-items: center;
+  height: 2em;
+}
+
+.wrapper_tarefas_done span,
+.wrapper_tarefas span{
+  text-transform: uppercase;
+  margin-left: 8px;
+  width: 40%;
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+.wrapper_tarefas_done span{
+  margin-right: auto;
+}
+
+.wrapper_tarefas_done input,
+.wrapper_tarefas input{
+  font-size: 1.2em;
+  margin-left: 8px;
+  padding-left: 5px;
+  width: 40%;
+  margin-right: auto;
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  background-color: rgb(236, 236, 236);
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 1.5px #818181;
+}
+
+input::placeholder{
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: rgb(203, 203, 203);
+  font-weight: 200;
+}
+
+.wrapper_tarefas input:read-only{
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.wrapper-input input[type="date"]{
+  width: 8em;
+  background-color: rgb(250, 250, 250);
+  height: 30px;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  background-color: transparent;
+  background: url(calendar.svg) no-repeat;
+  opacity: 1;
+}
+
+.done{
+  background-color: #f75a6a;
+  transition: background-color 200ms ease-in-out;
+}
+
+.done:hover{
+  background-color: #ff3b4f;
+}
+
+
+.not_done{
+  background-color: rgba(238, 238, 238, 0.61);
+  transition: background-color 180ms ease-in-out;
+}
+
+.not_done:hover{
+  background-color: rgba(25, 196, 115, 0.8);
+}
+
+/*-----------BUTTONS----------*/
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button.fas,
+button.far{
+  color: rgb(32, 32, 32);
+}
+
+button.tarefa-guardar,
+button.tarefa-delete,
+button.tarefa-edit,
+button.tarefa-uncheck{
+  background-color: transparent;
+}
+
+button.tarefa-delete{
+
+}
+
+button.showHide-done{
+  display: block;
+  margin: 1em auto;
+  vertical-align: middle;
+  padding: 0.3em;
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(#5d5d5d, #252525);
+  box-shadow: 0px 1.8px 0.4px #eeeeee;
+  color: white;
+  text-transform: uppercase;
+}
+
+button.adicionar-tarefa{
+  margin: 0 .2em;
+  border-radius: 5px;
+  background: linear-gradient(#8ad772, #649a53);
+  padding: 0 15px;
+  height: 38px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/*---------ALERT-------*/
+.wrapper-input>span{
+  display: flex;
+  justify-content: center;
+  color: rgb(230, 56, 56);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(159, 159, 159, 0.6);
+}
