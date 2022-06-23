@@ -9,7 +9,7 @@ class TodoList extends Component {
       tarefas_done:[],
       tarefa_adicionar: "",
       estado_tarefa: "",
-      data_tarefa: "",
+      data_tarefa: new Date().toISOString().slice(0, 10),
       alerta_tarefa: "",
       show_alert: "hidden_alert",
       wrapper_tarefas_done: "show",
@@ -32,7 +32,7 @@ class TodoList extends Component {
   componentDidMount (){
     this.tarefa_adicionar.focus()
   }
-  
+
   shouldComponentUpdate (){
     return true;
   }
@@ -108,7 +108,7 @@ class TodoList extends Component {
     tarefas.unshift(this.state.tarefas_done[tarefaIndex])
     tarefas_done.splice(tarefaIndex, 1)
     this.setState({
-      tarefas: this.state.tarefas, 
+      tarefas: this.state.tarefas,
       tarefas_done: this.state.tarefas_done
     })
     this.setLocalTarefas(this.state.tarefas)
@@ -201,6 +201,7 @@ class TodoList extends Component {
   }
 
   render() {
+    console.log(this.state.data_tarefa);
     return (
       <div className="TodoList">
         <div>
@@ -218,7 +219,7 @@ class TodoList extends Component {
             <input type="date"
                    value={this.state.data_tarefa}
                    name="data_tarefa"
-                   min={new Date()}
+                   min={Date.now()}
                    onChange={this.handleInputDateChange}/>
             <button className="adicionar-tarefa"
                     type="submit"
@@ -241,28 +242,28 @@ class TodoList extends Component {
                           onClick={this.handleToggleDone.bind(this, index)}/>
                   {
                     (this.state.tarefa_editing === index)
-                    ? <input onChange={this.handleChangeTarefaName.bind(this, index)} 
+                    ? <input onChange={this.handleChangeTarefaName.bind(this, index)}
                               value={item.text}/>
                     : <span>{item.text}</span>
                   }
                   {
                     (this.state.tarefa_editing === index)
-                    ? <input type="date" 
-                              onChange={this.handleChangeTarefaDate.bind(this, index)} 
+                    ? <input type="date"
+                              onChange={this.handleChangeTarefaDate.bind(this, index)}
                               value={item.date}/>
-                    : <input type="date" 
-                              readOnly={true} 
-                              onChange={this.handleChangeTarefaDate.bind(this, index)} 
+                    : <input type="date"
+                              readOnly={true}
+                              onChange={this.handleChangeTarefaDate.bind(this, index)}
                               value={item.date}/>
                   }
-                  <button className={(this.state.tarefa_editing === index) 
+                  <button className={(this.state.tarefa_editing === index)
                                       ? "fas fa-save fa-lg tarefa-guardar"
                                       : "fas fa-edit fa-lg tarefa-edit"}
                           onClick={this.handleEdit.bind(this, index)}/>
                   <button className="fas fa-trash-alt fa-lg tarefa-delete"
                           onClick={this.handleRemove.bind(this, index)}
-                          disabled={(!isNaN (this.state.tarefa_editing) && this.state.tarefa_editing !== null) 
-                                      ? "disabled" 
+                          disabled={(!isNaN (this.state.tarefa_editing) && this.state.tarefa_editing !== null)
+                                      ? "disabled"
                                       : ""}/>
                 </li>
                 )
