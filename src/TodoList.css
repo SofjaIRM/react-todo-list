@@ -51,8 +51,8 @@ button{
 }
 
 /*--------WRAPPER_TAREFAS------*/
-.wrapper_tarefas_done li,
-.wrapper_tarefas li{
+.wrapper_tasks_done li,
+.wrapper_tasks li{
   list-style: none;
   padding: 5px;
   border-radius: 2px;
@@ -62,8 +62,8 @@ button{
   height: 2em;
 }
 
-.wrapper_tarefas_done span,
-.wrapper_tarefas span{
+.wrapper_tasks_done span,
+.wrapper_tasks span{
   text-transform: uppercase;
   margin-left: 8px;
   width: 40%;
@@ -71,12 +71,12 @@ button{
   font-size: 1.2em;
 }
 
-.wrapper_tarefas_done span{
+.wrapper_tasks_done span{
   margin-right: auto;
 }
 
-.wrapper_tarefas_done input,
-.wrapper_tarefas input{
+.wrapper_tasks_done input,
+.wrapper_tasks input{
   font-size: 1.2em;
   margin-left: 8px;
   padding-left: 5px;
@@ -96,7 +96,7 @@ input::placeholder{
   font-weight: 200;
 }
 
-.wrapper_tarefas input:read-only{
+.wrapper_tasks input:read-only{
   box-shadow: none;
   background-color: transparent;
 }
@@ -153,14 +153,14 @@ button.far{
   color: rgb(32, 32, 32);
 }
 
-button.tarefa-guardar,
-button.tarefa-delete,
-button.tarefa-edit,
-button.tarefa-uncheck{
+button.task-save,
+button.task-delete,
+button.task-edit,
+button.task-uncheck{
   background-color: transparent;
 }
 
-button.tarefa-delete{
+button.task-delete{
 
 }
 
@@ -177,7 +177,7 @@ button.showHide-done{
   text-transform: uppercase;
 }
 
-button.adicionar-tarefa{
+button.add-task{
   margin: 0 .2em;
   border-radius: 5px;
   background: linear-gradient(#8ad772, #649a53);
