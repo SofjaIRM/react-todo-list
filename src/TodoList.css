@@ -17,12 +17,12 @@ header{
 .show_alert{
   opacity: 1;
 }
-
+/*
 .not_done input{
   border: none;
   background-color: transparent;
   font-family: arial;
-}
+}*/
 /*font*/
 input,
 button{
@@ -39,7 +39,7 @@ button{
 .wrapper-input input{
   border-radius: 2px;
   border: 1px solid #dedede;
-  padding: 3px 0px 3px 15px;
+  padding: 3px 0 3px 15px;
   width: 40%;
   height: 2rem;
   font-size: 1.5em;
@@ -51,7 +51,6 @@ button{
 }
 
 /*--------WRAPPER_TAREFAS------*/
-.wrapper_tasks_done li,
 .wrapper_tasks li{
   list-style: none;
   padding: 5px;
@@ -62,7 +61,6 @@ button{
   height: 2em;
 }
 
-.wrapper_tasks_done span,
 .wrapper_tasks span{
   text-transform: uppercase;
   margin-left: 8px;
@@ -75,7 +73,6 @@ button{
   margin-right: auto;
 }
 
-.wrapper_tasks_done input,
 .wrapper_tasks input{
   font-size: 1.2em;
   margin-left: 8px;
@@ -87,6 +84,7 @@ button{
   background-color: rgb(236, 236, 236);
   border-radius: 4px;
   box-shadow: inset 1px 1px 1.5px #818181;
+  border: none;
 }
 
 input::placeholder{
@@ -172,7 +170,7 @@ button.showHide-done{
   width: 100%;
   border-radius: 5px;
   background: linear-gradient(#5d5d5d, #252525);
-  box-shadow: 0px 1.8px 0.4px #eeeeee;
+  box-shadow: 0 2px 1px #eeeeee;
   color: white;
   text-transform: uppercase;
 }
